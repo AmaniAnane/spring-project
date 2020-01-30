@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>List of boutique</title>
+</head>
+<body>
+
+<table>
+	<tr><th>ID</th><th>nom de boutique</th><th>tel</th><th>Genre</th></tr>
+	<tr th:each="B:${boutique}">
+	<td th:text="${B.id}"/>
+	<td th:text="${B.nom}"/>
+	<td th:text="${B.tel}"/>
+	
+
+	
+		
+	
+	<td>
+		<a th:href="@{//Livrer(num=${boutique.id})}" th:text="leur-livraison"/>
+	</td>
+	</tr>	
+</table>
+
+</body>
+</html>

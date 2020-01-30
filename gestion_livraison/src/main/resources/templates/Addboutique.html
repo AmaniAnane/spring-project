@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add an boutique</title>
+</head>
+<body>
+<form th:action="@{/boutique/save}" th:object="${boutique}" method="POST">
+<p>nom <input type="text" th:field="*{nom}"/><span th:errors="*{nom}"/></p>
+<p>tel<input type="text" th:field="*{tel}"/><span th:errors="*{tel}"/></p>
+
+<p><input type="submit" value="save"/></p>
+</form>
+</body>
+</html>
